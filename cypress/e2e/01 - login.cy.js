@@ -5,7 +5,7 @@ describe('Login - Sauce Demo', () => {
   })
 
   // CT-01 - Login com credenciais válidas
-  it('Deve realizar login com usuário válido', () => {
+  it('CT-01 Deve realizar login com usuário válido', () => {
     cy.get('#user-name').type('standard_user')
     cy.get('#password').type('secret_sauce')
     cy.get('#login-button').click()
@@ -14,7 +14,7 @@ describe('Login - Sauce Demo', () => {
   })
 
   // CT-02 - Login com senha inválida
-  it('Deve exibir erro ao logar com senha inválida', () => {
+  it('CT-02 Deve exibir erro ao logar com senha inválida', () => {
     cy.get('#user-name').type('standard_user')
     cy.get('#password').type('senha_invalida')
     cy.get('#login-button').click()
@@ -25,7 +25,7 @@ describe('Login - Sauce Demo', () => {
   })
 
   // CT-03 - Login com usuário bloqueado
-  it('Deve impedir login de usuário bloqueado', () => {
+  it('CT-03 Deve impedir login de usuário bloqueado', () => {
     cy.get('#user-name').type('locked_out_user')
     cy.get('#password').type('secret_sauce')
     cy.get('#login-button').click()
@@ -36,7 +36,7 @@ describe('Login - Sauce Demo', () => {
   })
 
   // CT-04 - Login sem informar usuário
-  it('Deve exibir erro ao tentar logar sem usuário', () => {
+  it('CT-04 Deve exibir erro ao tentar logar sem usuário', () => {
     cy.get('#password').type('secret_sauce')
     cy.get('#login-button').click()
 
@@ -46,7 +46,7 @@ describe('Login - Sauce Demo', () => {
   })
 
   // CT-05 - Login sem informar senha
-  it('Deve exibir erro ao tentar logar sem senha', () => {
+  it('CT-05 Deve exibir erro ao tentar logar sem senha', () => {
     cy.get('#user-name').type('standard_user')
     cy.get('#login-button').click()
 
